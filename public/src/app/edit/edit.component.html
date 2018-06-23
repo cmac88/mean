@@ -1,0 +1,41 @@
+<div class='wrapper'>
+    <a [routerLink]='["/"]'>Home</a>
+    <p>Edit this pet</p>
+    <form (submit)='onSubmit(pet._id)'>
+      
+      <div class='errors' *ngIf='errors'>
+          <p class='errs' class="errs" *ngFor='let e of errors'>{{e.message}}</p>
+      </div>
+      Pet Name: <br> 
+      <input type="text" name='name'  [(ngModel)]='pet.name'><br>
+      Pet Type: <br>
+      <input type="text" name='type' [(ngModel)]='pet.type'><br>
+      Description: <br>
+      <!-- <div *ngIf='!description.valid'>
+        <p *ngIf='description.errors.required'>Description must be filled in</p>
+      </div> -->
+      <input type="text" name ='description' [(ngModel)] ='pet.description'> <br>
+      
+      Skills:
+      <ul>
+        <li>
+          Skill 1: <br>
+          <input type="text" name='skill1' [(ngModel)]='pet.skill1'><br>
+        </li>
+        <li>
+          Skill 2: <br>
+          <input type="text" name='skill2' [(ngModel)]='pet.skill2'><br>
+        </li>
+        <li>
+          Skill 3: <br>
+          <input type="text" name='skill3' [(ngModel)]='pet.skill3'><br>
+        </li>
+      </ul>
+      <button [routerLink]='["/"]'>Cancel</button>
+      <input type="submit" value='Submit'>
+    </form>
+  </div>
+  <!-- required
+  minlength ="3" 
+  
+  #description ='ngModel' -->

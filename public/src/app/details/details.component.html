@@ -1,0 +1,26 @@
+<a [routerLink]='["/"]'>Home</a>
+<h3>Details about {{pet.name}}</h3>
+<table>
+  <tr>
+    <th>Pet Type:</th>
+    <td>{{pet.type}}</td> 
+  </tr>
+  <tr>
+    <th>Description:</th>
+    <td>{{pet.description}}</td>
+  </tr>
+  <tr>
+    <th>Skills:</th>
+    <td>  
+        <li *ngIf='pet.skill1'>{{pet.skill1}}</li>
+        <li *ngIf='pet.skill2'>{{pet.skill2}}</li>
+        <li *ngIf='pet.skill3'>{{pet.skill3}}</li>
+    </td>
+  </tr>
+  <tr>
+      <th>Likes:</th>
+      <td>{{pet.likes}}</td>
+  </tr>
+</table>
+<button [disabled]='click == false' (click)=likeUp(pet._id)>Like this pet</button>
+<button (click)='delete(pet._id)'>Delete</button>

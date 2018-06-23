@@ -1,0 +1,13 @@
+form{
+    padding: 20px;
+}
+form input{
+    font-size: 17px;
+    height: 30px;
+    width: 300px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.errs{
+    color: red;
+}
