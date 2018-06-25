@@ -29,6 +29,6 @@ deletePet(id){
   return this._http.delete('/api/pets/'+id)
 }
 like(id){
-  return this._http.put('/api/pets/like/' + id)
+  return this._http.put('/api/pets/like/' + id, 1)
 }
 }

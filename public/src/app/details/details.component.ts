@@ -25,7 +25,7 @@ export class DetailsComponent implements OnInit {
     })
   }
   likeUp(id){
-    let observable = this._http.like(id, 1)
+    let observable = this._http.like(id)
     observable.subscribe(data=>{
     this.click = false
     this.getPet(this.pid)
