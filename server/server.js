@@ -7,6 +7,6 @@ app.use(bp.json());
 router.router(app);
 
 app.use(express.static(path.join(__dirname, "../public/dist/public")))
-app.all('*', (req, res)=>res.sendFile(path.join(__dirname, '../public/dist/public/index.html')))
+app.all('*', (req, res)=>res.sendFile(path.resolve(__dirname, '../public/dist/public/index.html')))
 
 app.listen(8000, ()=>console.log('listening'))
